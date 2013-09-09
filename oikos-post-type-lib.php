@@ -39,15 +39,16 @@
  
 class Oikos_Post_Type {
 	
-	/*
-	 * This function gets all posts of the type..
-	 * 
-	 * Parameters:
-	 *   $options - used to pass options to the WP_Query - can be used for ordering and so on.
-	 * 
-	 * Notes:
-	 *   By default the list is ordered alphabetically by title.
-	 */
+    /*
+     * This function gets the specified post. Decided not to sanity check the type so you
+     * can call this for any id of any post of any type.
+     *
+     * Parameters:
+     *   $id - ID of the post to get.
+     *
+     * Notes:
+     *   None.
+     */
 	public static function get( $id ) {
 		return get_post( $id );
 	}
@@ -194,7 +195,7 @@ class Oikos_Post_Type_Template extends Oikos_Post_Type {
 	private static $post_type;
 		
 	public static function get( $id ) {
-		return parent::get( static::$post_type, $id );
+		return parent::get( $id );
 	}
 	public static function get_all( $options=array() ) {
 		return parent::get_all( static::$post_type, $options );
