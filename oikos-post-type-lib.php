@@ -197,19 +197,19 @@ class Oikos_Post_Type_Template {
 		return Oikos_Post_Type::get( $id );
 	}
 	public static function get_all( $options=array() ) {
-		return Oikos_Post_Type::get_all( self::$post_type, $options );
+		return Oikos_Post_Type::get_all( static::$post_type, $options );
 	}
 	public static function get_recent( $options=array() ) {
-		return Oikos_Post_Type::get_recent( self::$post_type, $options );
+		return Oikos_Post_Type::get_recent( static::$post_type, $options );
 	}
 	public static function get_list( $options=array(), $no_value_label='' ) {
-		return Oikos_Post_Type::get_list( self::$post_type, $options, $no_value_label );
+		return Oikos_Post_Type::get_list( static::$post_type, $options, $no_value_label );
 	}
 	public static function get_posts_by_meta( $meta_key='', $meta_value='', $options=array() ) {
-		return Oikos_Post_Type::get_posts_by_meta( self::$post_type, $meta_key, $meta_value, $options);
+		return Oikos_Post_Type::get_posts_by_meta( static::$post_type, $meta_key, $meta_value, $options);
 	}
 	public static function get_posts_by_meta_query( $meta_query, $options=array() ) {
-		return Oikos_Post_Type::get_posts_by_meta_query( self::$post_type, $meta_query, $options);
+		return Oikos_Post_Type::get_posts_by_meta_query( static::$post_type, $meta_query, $options);
 	}
 	
 }
